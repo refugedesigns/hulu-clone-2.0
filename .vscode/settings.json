@@ -1,0 +1,9 @@
+{
+    "editor.fontFamily": "Fira Code,Consolas, 'Courier New', monospace",
+    "files.associations": {
+        "javascript": "javascriptreact"
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    }
+}

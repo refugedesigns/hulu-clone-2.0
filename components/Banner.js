@@ -1,0 +1,30 @@
+import Image from "next/image"
+import { MenuIcon } from "@heroicons/react/solid"
+
+const Banner = () => {
+    return (
+        <div className="relative h-[650px] w-full">
+            <div className="absolute w-full h-56 bg-gradient-to-b from-black to-transparent top-0 z-20" />
+            <div className="absolute w-full h-full bg-black opacity-40 top-0 z-20" />
+            <Image src="/images/neflix.jpg" layout="fill" objectFit="cover" />
+            <div className="absolute z-50 p-6 md:px-12 w-full">
+                <div className="flex justify-end cursor-pointer">
+                    <MenuIcon className="h-7 text-white lg:hidden" />
+                </div>
+                <h3 className="hidden lg:block text-white text-right font-bold cursor-pointer hover:text-gray-200">LOG IN</h3>
+                <div className="text-white text-center flex flex-col items-center mt-20">
+                    <h3 className="py-3 uppercase font-bold text-green-400">Try up to one month free</h3>
+                    <div className="relative h-14 w-full">
+                        <Image src="/images/hulu.png" layout="fill" objectFit="contain" />
+                    </div>
+                    <h2 className="pt-3 font-bold text-lg md:text-2xl">Watch thousands of TV shows and movies</h2>
+                    <p className="hidden md:inline-flex mt-4 text-sm">HBO Max&trade;, SHOWTIME&reg;, CINEMAX&reg;, and STARZ&reg; available as add-ons </p>
+                    <button className="mt-6 mb-4 py-3 px-6 bg-white text-black whitespace-nowrap w-min uppercase font-bold tracking-wider rounded-lg hover:bg-gray-200">Start your free trial</button>
+                    <p className="text-[10px] text-gray-300">Free trial for new & eligible returning subscribers only</p>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Banner
