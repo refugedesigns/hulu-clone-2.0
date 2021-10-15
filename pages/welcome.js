@@ -10,6 +10,8 @@ import MobileAddons from "../components/MobileAddons"
 import DesktopAddons from "../components/DesktopAddons"
 import MobileFooter from "../components/MobileFooter"
 import DesktopFooter from "../components/DesktopFooter"
+import MobileLoginDropdown from "../components/MobileLoginDropdown"
+import Login from "../components/Login"
 
 
 const CARDINFO = [
@@ -43,6 +45,8 @@ function welcomePage() {
     const [width, setWidth] = useState(null)
     const [active, setActive] = useState("firstContainer")
     const [showAddons, setShowAddons] = useState(false)
+    const [showMobileLogin, setShowMobileLogin] = useState(false)
+    const [ showLogin, setShowLogin] = useState(false)
 
 
     const firstContainerHandler = () => {
@@ -78,7 +82,9 @@ function welcomePage() {
     }
     return (
         <div>
-            <Banner />
+            {showMobileLogin && <MobileLoginDropdown setShowMobileLogin={setShowMobileLogin} />}
+            {showLogin && <Login />}
+            <Banner setShowMobileLogin={setShowMobileLogin} />
             <section className="bg-black py-6 px-4">
                 <div className="flex flex-col items-center w-full mx-auto">
                     <p className="text-green-400 text-sm font-bold tracking-wide py-4">INCLUDED IN ALL PLANS</p>
@@ -223,7 +229,7 @@ function welcomePage() {
                 <div className="md:hidden">
                     <MobileFooter />
                 </div>
-                <div className="hidden md:block">
+                <div className="hidden md:block bg-gray-200">
                     <DesktopFooter />
                 </div>
             </section>

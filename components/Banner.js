@@ -1,15 +1,14 @@
 import Image from "next/image"
-import { MenuIcon } from "@heroicons/react/solid"
+import { MenuIcon } from "@heroicons/react/outline"
 import OverlayCard from "./OverlayCard"
 
-const Banner = () => {
+const Banner = ({setShowMobileLogin}) => {
     return (
         <div className="relative h-[730px]">
             <div className="absolute w-full h-56 bg-gradient-to-b from-black to-transparent top-0 z-20" />
-            <div className="absolute w-full h-full bg-gray-900 opacity-60 top-0 z-20" />
-            <Image src="/images/neflix.jpg" layout="fill" objectFit="cover" />
-            <div className="absolute z-50 p-6 md:px-12 w-full">
-                <div className="flex justify-end cursor-pointer">
+            <Image src="/images/hulu-background.jpg" layout="fill" objectFit="cover" />
+            <div className="absolute z-30 p-6 md:px-12 w-full">
+                <div onClick={() => setShowMobileLogin(true)} className="flex justify-end cursor-pointer">
                     <MenuIcon className="h-7 text-white lg:hidden" />
                 </div>
                 <h3 className="hidden lg:block text-white text-right font-bold cursor-pointer hover:text-gray-200">LOG IN</h3>
@@ -24,7 +23,7 @@ const Banner = () => {
                     <p className="text-[10px] text-gray-300">Free trial for new & eligible returning subscribers only</p>
                 </div>
             </div>
-            <div className="absolute bottom-0 z-50 w-full">
+            <div className="absolute bottom-0 z-40 w-full">
                 <OverlayCard />
             </div>
         </div>

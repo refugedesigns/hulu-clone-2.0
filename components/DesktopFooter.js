@@ -2,7 +2,7 @@ import { PlayIcon } from "@heroicons/react/outline"
 
 const DesktopFooter = () => {
     return (
-        <div className="text-sm space-y-8 px-12 pt-12 pb-4 bg-gray-200 mx-auto w-full">          
+        <div className="text-sm space-y-8 px-12 pt-12 pb-4 mx-auto lg:max-w-6xl 2xl:max-w-7xl">          
             <div className="lg:grid grid-cols-3 gap-12 max-w-7xl mx-auto">
                 <div className="grid grid-cols-4 lg:col-span-2 text-gray-500">
                     <div className="space-y-3">
