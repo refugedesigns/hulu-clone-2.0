@@ -8,5 +8,12 @@
     },
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
-    "editor.formatOnSaveMode": "modifications"
+    "editor.formatOnSaveMode": "modifications",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnType": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+    "eslint.format.enable": true
 }

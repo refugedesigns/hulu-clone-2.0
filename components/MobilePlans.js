@@ -22,7 +22,6 @@ const MobilePlans = () => {
         speed: 2000,
         focusOnSelect: true,
         adaptiveHeight: true,
-        rtl: true,
         beforeChange: (current, next) => setActive(next),
         responsive:[
             // {
